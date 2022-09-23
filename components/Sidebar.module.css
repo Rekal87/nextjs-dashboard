@@ -8,7 +8,8 @@
     height: 100%;
 }
 
-.li {
-    margin-top: 1;
-    margin-bottom: 1;
+.divider {
+    margin: 13px 18px;
+    height: 1px;
+    background-color: #ffffff1a;
 }

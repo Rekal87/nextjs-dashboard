@@ -1,16 +1,20 @@
 import {
   Collapse,
+  Divider,
+  Drawer,
   List,
+  ListItem,
   ListItemButton,
   ListItemText,
   ListSubheader,
   Typography,
 } from '@mui/material';
-import { Box, Container } from '@mui/system';
+import { Box } from '@mui/system';
 import { useState } from 'react';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import styles from './Sidebar.module.css';
+import Profile from './Profile';
 
 export default function Sidebar() {
   const [menuOne, setMenuOne] = useState(false);
@@ -32,62 +36,105 @@ export default function Sidebar() {
   };
   return (
     <>
-      <Container>
-        <Box className={styles.menu}>
-          <Box>{/*logo*/}</Box>
-          <Box>{/*user loggedin*/}</Box>
-          <Box>
-            <List
-              subheader={
-                <ListSubheader component='div' id='nested-list-subheader'>
-                  GENERAL
-                </ListSubheader>
-              }
-            >
-              <ListItemButton onClick={blueprintsMenu.bind()}>
-                <ListItemText primary='Blueprints' />
-                {menuOne ? <ExpandLess /> : <ExpandMore />}
-              </ListItemButton>
-              <Collapse in={menuOne} timeout='auto' unmountOnExit>
+      <Drawer
+        sx={{
+          width: 290,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: 290,
+            boxSizing: 'border-box',
+          },
+        }}
+        variant='permanent'
+        anchor='left'
+      >
+        <Box>{/*logo*/}</Box>
+        <Divider className={styles.divider} />
+        <Profile />
+        <Divider className={styles.divider} />
+        <Box>
+          <List
+            component='nav'
+            aria-labelledby='nested-list-subheader'
+            subheader={
+              <ListSubheader id='nested-list-subheader'>GENERAL</ListSubheader>
+            }
+          >
+            <ListItemButton onClick={blueprintsMenu.bind()}>
+              <ListItemText primary='Blueprints' />
+              {menuOne ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={menuOne} timeout='auto' unmountOnExit>
+              <ListItem>
                 <ListItemText primary='Menu 1' />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary='Menu 2' />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary='Menu 3' />
-              </Collapse>
-              <ListItemButton onClick={dashboardMenu}>
-                <ListItemText primary='Dashboards' />
-                {menuTwo ? <ExpandLess /> : <ExpandMore />}
-              </ListItemButton>
-              <Collapse in={menuTwo} timeout='auto' unmountOnExit>
+              </ListItem>
+            </Collapse>
+            <ListItemButton onClick={dashboardMenu}>
+              <ListItemText primary='Dashboards' />
+              {menuTwo ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={menuTwo} timeout='auto' unmountOnExit>
+              <ListItem>
                 <ListItemText primary='Menu 1' />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary='Menu 2' />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary='Menu 3' />
-              </Collapse>
-              <ListItemButton onClick={dataDisplayMenu}>
-                <ListItemText primary='Data Display' />
-                {menuThree ? <ExpandLess /> : <ExpandMore />}
-              </ListItemButton>
-              <Collapse in={menuThree} timeout='auto' unmountOnExit>
+              </ListItem>
+            </Collapse>
+            <ListItemButton onClick={dataDisplayMenu}>
+              <ListItemText primary='Data Display' />
+              {menuThree ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={menuThree} timeout='auto' unmountOnExit>
+              <ListItem>
                 <ListItemText primary='Menu 1' />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary='Menu 2' />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary='Menu 3' />
-              </Collapse>
-              <ListItemButton onClick={applicationsMenu}>
-                <ListItemText primary='Applications' />
-                {menuFour ? <ExpandLess /> : <ExpandMore />}
-              </ListItemButton>
-              <Collapse in={menuFour} timeout='auto' unmountOnExit>
+              </ListItem>
+            </Collapse>
+            <ListItemButton onClick={applicationsMenu}>
+              <ListItemText primary='Applications' />
+              {menuFour ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={menuFour} timeout='auto' unmountOnExit>
+              <ListItem>
                 <ListItemText primary='Menu 1' />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary='Menu 2' />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary='Menu 3' />
-              </Collapse>
+              </ListItem>
+            </Collapse>
+            <ListItem>
               <ListItemText primary='Menu 5' />
+            </ListItem>
+            <ListItem>
               <ListItemText primary='Menu 6' />
+            </ListItem>
+            <ListItem>
               <ListItemText primary='Menu 7' />
+            </ListItem>
+            <ListItem>
               <ListItemText primary='Menu 8' />
-            </List>
-          </Box>
+            </ListItem>
+          </List>
         </Box>
-      </Container>
+      </Drawer>
     </>
   );
 }

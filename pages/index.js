@@ -1,7 +1,7 @@
+import { Container } from '@mui/material';
 import Head from 'next/head';
-import Image from 'next/image';
+import Profile from '../components/Profile';
 import Sidebar from '../components/Sidebar';
-import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -11,7 +11,9 @@ export default function Home() {
         <meta name='description' content='Just a Dashboard' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Sidebar />
+      <Container>
+        <Sidebar />
+      </Container>
     </div>
   );
 }
