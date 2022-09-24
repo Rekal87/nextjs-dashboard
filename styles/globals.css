@@ -19,7 +19,7 @@ a {
 .wrapper {
   display: block;
   position: relative;
-  background: #ffffff80;
+  
   margin-bottom: 36px;
-  box-shadow: rgb(34 51 84 / 10%) 0px 2px 4px -3px, rgb(34 51 84 / 5%) 0px 5px 12px -4px;
+ 
 }

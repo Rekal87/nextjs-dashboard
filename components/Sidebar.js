@@ -1,18 +1,5 @@
-import {
-  Collapse,
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  ListSubheader,
-  Typography,
-} from '@mui/material';
+import { Divider, Drawer } from '@mui/material';
 import { Box } from '@mui/system';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import { useState } from 'react';
 import styles from './Sidebar.module.css';
 import Profile from './Profile';
 import Image from 'next/image';

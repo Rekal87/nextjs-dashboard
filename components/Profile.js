@@ -1,12 +1,4 @@
-import {
-  Card,
-  Box,
-  CardContent,
-  Typography,
-  CardMedia,
-  Avatar,
-} from '@mui/material';
-import Image from 'next/image';
+import { Card, Box, Typography, Avatar } from '@mui/material';
 import styles from './Profile.module.css';
 
 export default function Profile() {
