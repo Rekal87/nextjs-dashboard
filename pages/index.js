@@ -1,6 +1,6 @@
 import { Container } from '@mui/material';
 import Head from 'next/head';
-import Profile from '../components/Profile';
+import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
 export default function Home() {
@@ -13,6 +13,7 @@ export default function Home() {
       </Head>
       <Container>
         <Sidebar />
+        <Navbar />
       </Container>
     </div>
   );

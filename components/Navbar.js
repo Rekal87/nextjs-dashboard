@@ -11,6 +11,9 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import { useState } from 'react';
+import styles from './Navbar.module.css';
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -23,29 +26,28 @@ export default function Navbar() {
   };
   return (
     <>
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          textAlign: 'center',
-          border: '1px solid black',
-          justifyContent: 'flex-end',
-        }}
-      >
-        <Typography sx={{ minWidth: 100 }}>Contact</Typography>
-        <Typography sx={{ minWidth: 100 }}>Profile</Typography>
-        <Tooltip title='Account settings'>
-          <IconButton
-            onClick={handleClick}
-            size='small'
-            sx={{ ml: 2 }}
-            aria-controls={open ? 'account-menu' : undefined}
-            aria-haspopup='true'
-            aria-expanded={open ? 'true' : undefined}
-          >
-            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
-          </IconButton>
-        </Tooltip>
+      <Box className={styles.navbar}>
+        <div className={styles.leftMenu}>
+          <Typography sx={{ minWidth: 100 }}>Contact</Typography>
+          <Typography sx={{ minWidth: 100 }}>Profile</Typography>
+        </div>
+        <div className={styles.rightMenu}>
+          <Badge badgeContent={4} color='primary'>
+            <MailIcon color='action' />
+          </Badge>
+          <Tooltip title='Account settings'>
+            <IconButton
+              onClick={handleClick}
+              size='small'
+              sx={{ ml: 2 }}
+              aria-controls={open ? 'account-menu' : undefined}
+              aria-haspopup='true'
+              aria-expanded={open ? 'true' : undefined}
+            >
+              <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+            </IconButton>
+          </Tooltip>
+        </div>
       </Box>
       <Menu
         anchorEl={anchorEl}

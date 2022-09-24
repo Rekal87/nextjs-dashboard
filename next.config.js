@@ -7,6 +7,6 @@ const nextConfig = {
 module.exports = {
   nextConfig,
   images: {
-    domains: ['dl.memuplay.com'],
+    domains: ['assets.example.com'],
   },
 };
