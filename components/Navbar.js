@@ -15,6 +15,7 @@ import styles from './Navbar.module.css';
 import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 import Link from 'next/link';
+import { Button } from '@mui/material';
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -30,9 +31,16 @@ export default function Navbar() {
       <Box className={styles.navbar}>
         <div className={styles.leftMenu}>
           <Link href='/pages/Contact.js'>
-            <Typography sx={{ minWidth: 100 }}>Contact</Typography>
+            <Button variant='text'>
+              <Typography sx={{ minWidth: 100 }}>Contact</Typography>
+            </Button>
           </Link>
-          <Typography sx={{ minWidth: 100 }}>Profile</Typography>
+
+          <Link href='/'>
+            <Button>
+              <Typography sx={{ minWidth: 100 }}>Profile</Typography>
+            </Button>
+          </Link>
         </div>
         <div className={styles.rightMenu}>
           <Badge badgeContent={4} color='primary'>
