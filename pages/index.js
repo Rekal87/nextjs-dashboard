@@ -1,7 +1,6 @@
 import { Container } from '@mui/material';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
+import PageTitle from '../components/PageTitle';
 
 export default function Home() {
   return (
@@ -12,8 +11,9 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Container>
-        <Sidebar />
-        <Navbar />
+        <div className='wrapper'>
+          <PageTitle />
+        </div>
       </Container>
     </div>
   );

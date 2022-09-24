@@ -9,11 +9,11 @@
     z-index: 6;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(3px);
-    position: fixed;
     -webkit-box-pack: justify;
     justify-content: space-between;
     width: 100%;
     box-shadow: rgb(34 51 84 / 20%) 0px 2px 8px -3px, rgb(34 51 84 / 10%) 0px 5px 22px -4px;
+    margin-bottom: 10px;
 }
 
 .rightMenu {

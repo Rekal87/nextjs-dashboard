@@ -14,6 +14,7 @@ import { useState } from 'react';
 import styles from './Navbar.module.css';
 import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -28,7 +29,9 @@ export default function Navbar() {
     <>
       <Box className={styles.navbar}>
         <div className={styles.leftMenu}>
-          <Typography sx={{ minWidth: 100 }}>Contact</Typography>
+          <Link href='/pages/Contact.js'>
+            <Typography sx={{ minWidth: 100 }}>Contact</Typography>
+          </Link>
           <Typography sx={{ minWidth: 100 }}>Profile</Typography>
         </div>
         <div className={styles.rightMenu}>
