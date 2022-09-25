@@ -12,7 +12,7 @@ export default function Dashboard() {
     <>
       <Box>
         <Typography variant='h1' p={4}>
-          Something Welcome
+          Something Something Welcome
         </Typography>
       </Box>
 
