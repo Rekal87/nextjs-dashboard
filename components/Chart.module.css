@@ -42,3 +42,8 @@
 .failure {
     border-bottom: 5px solid #ff1944;
 }
+
+.colorRed {
+    color: #fff;
+    background-color: #ff1943 !important;
+}

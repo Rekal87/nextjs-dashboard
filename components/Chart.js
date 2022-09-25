@@ -9,9 +9,9 @@ export default function Chart(props) {
           maxWidth: 580,
           padding: '27px',
           borderRadius: '10px',
-          background: 'transparent',
         }}
       >
+        {props.color}
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Box>
             <Typography className={styles.cssH1} variant='h1'>
