@@ -1,20 +1,20 @@
 import {
-  Grid,
-  Paper,
+  Avatar,
   Box,
-  Typography,
+  Button,
   Chip,
-  List,
   Divider,
+  Grid,
+  List,
   ListItem,
   ListItemAvatar,
-  Avatar,
   ListItemText,
-  Button,
+  Paper,
+  Typography,
 } from '@mui/material';
-import styles from './Chart.module.css';
+import styles from './DataCard.module.css';
 
-export default function ChartBig() {
+export default function DataCardBig() {
   return (
     <Grid className={styles.graphBox} xs={6}>
       <Paper sx={{ maxWidth: 1221, borderRadius: '10px' }}>
@@ -84,6 +84,7 @@ export default function ChartBig() {
                     </>
                   }
                 />
+                <Button>View</Button>
               </ListItem>
               <Divider variant='inset' component='li' />
               <ListItem alignItems='flex-start'>
@@ -106,6 +107,7 @@ export default function ChartBig() {
                     </>
                   }
                 />
+                <Button>View</Button>
               </ListItem>
             </List>
           </Box>

@@ -1,33 +1,17 @@
-import { Box, Paper, Typography, Button, Grid } from '@mui/material';
-import styles from './Chart.module.css';
+import React from 'react';
+import Chart from 'react-apexcharts';
 
-export default function Chart(props) {
+const CustomChart = ({ chartOptions }) => {
   return (
-    <Grid className={styles.graphBox} xs={3}>
-      <Paper
-        sx={{
-          maxWidth: 580,
-          padding: '27px',
-          borderRadius: '10px',
-        }}
-      >
-        {props.color}
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Box>
-            <Typography className={styles.cssH1} variant='h1'>
-              {props.number}
-            </Typography>
-            <Typography className={styles.cssSubtitle} variant='subtitle2'>
-              Total Orders
-            </Typography>
-          </Box>
-
-          <Button variant='outlined' size='small'>
-            VIEW ALL
-          </Button>
-        </Box>
-        <Box>Charts</Box>
-      </Paper>
-    </Grid>
+    <div>
+      <Chart
+        options={chartOptions.options}
+        series={chartOptions.series}
+        type={chartOptions.options.chart.type}
+        width='500'
+      />
+    </div>
   );
-}
+};
+
+export default CustomChart;

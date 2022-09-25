@@ -1,34 +1,34 @@
+import RemoveIcon from '@mui/icons-material/Remove';
+import { Box, Paper } from '@mui/material';
 import * as React from 'react';
-import styles from './Chart.module.css';
-import { Paper, Box } from '@mui/material';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import styles from './DataCard.module.css';
 
-export default function ChartSmall() {
+export default function DataCardSmallX() {
   return (
     <Box className={styles.graphBox}>
       <Paper
-        className={styles.success}
+        className={styles.failure}
         sx={{ borderRadius: 2, p: 2, minWidth: 300 }}
       >
-        <Box sx={{ color: 'text.secondary' }}>Sessions</Box>
+        <Box sx={{ color: 'text.secondary' }}>Subscriptions</Box>
         <Box sx={{ color: 'text.primary', fontSize: 34, fontWeight: 'medium' }}>
-          <ExpandLessIcon
+          <RemoveIcon
             sx={{
-              color: 'success.light',
+              color: '#ff1943',
             }}
           />
-          98.3 K
+          545
         </Box>
         <Box
           sx={{
-            color: 'success.light',
+            color: '#ff1943',
             display: 'inline',
             fontWeight: 'bold',
             mx: 0.5,
             fontSize: 14,
           }}
         >
-          +18.77%
+          -8.77%
         </Box>
         <Box sx={{ color: 'text.secondary', display: 'inline', fontSize: 14 }}>
           vs. last week
