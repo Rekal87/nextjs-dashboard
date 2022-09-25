@@ -19,7 +19,6 @@ a {
 .wrapper {
   display: block;
   position: relative;
-  
+  margin-left: 290px;
   margin-bottom: 36px;
- 
 }

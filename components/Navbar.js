@@ -30,15 +30,14 @@ export default function Navbar() {
     <>
       <Box className={styles.navbar}>
         <div className={styles.leftMenu}>
+          <Link href='/'>
+            <Button>
+              <Typography sx={{ minWidth: 100 }}>Dashboard</Typography>
+            </Button>
+          </Link>
           <Link href='/contact'>
             <Button component='a' variant='text'>
               <Typography sx={{ minWidth: 100 }}>Contact</Typography>
-            </Button>
-          </Link>
-
-          <Link href='/'>
-            <Button>
-              <Typography sx={{ minWidth: 100 }}>Profile</Typography>
             </Button>
           </Link>
         </div>

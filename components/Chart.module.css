@@ -1,0 +1,44 @@
+.graphBox {
+    padding-left: 36px;
+    padding-top: 36px;
+    margin-bottom: 36px;
+}
+
+.cssH1 {
+    margin: 0px 0px 4px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.cssSubtitle {
+    color: #223354b3;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.bigBox {
+    background-color: #22335405;
+    margin: 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.bigBoxTitle {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.bigBoxSubTitle {
+    color: #223354b3;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.success {
+    border-bottom: 5px solid #57ca22;
+}
+
+.failure {
+    border-bottom: 5px solid #ff1944;
+}

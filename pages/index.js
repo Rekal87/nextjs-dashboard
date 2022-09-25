@@ -1,6 +1,6 @@
 import { Container } from '@mui/material';
 import Head from 'next/head';
-import PageTitle from '../components/PageTitle';
+import Dashboard from '../components/Dashboard';
 
 export default function Home() {
   return (
@@ -10,9 +10,9 @@ export default function Home() {
         <meta name='description' content='Just a Dashboard' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Container>
+      <Container maxWidth='false'>
         <div className='wrapper'>
-          <PageTitle />
+          <Dashboard />
         </div>
       </Container>
     </div>
